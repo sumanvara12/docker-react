@@ -1,0 +1,9 @@
+sudo : required # needs super user permission
+services:
+  -docker # docker needs to be running
+
+before install:
+  -docker build -t myDockerReact -f Dockerfile.dev # build image
+
+script:
+  -docker run -e CI=true myDockerReact npm run test # use -- --coverage or -e CI=true (for exiting test)
