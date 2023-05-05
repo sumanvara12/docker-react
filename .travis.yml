@@ -11,8 +11,8 @@ script:
 deploy:
   provider : elasticbeanstalk
   region : "us-east-2"
-  app : "docker-react-aws"
-  env : "Docker-react-aws-env"
+  app : "summu-docker"
+  env : "summu-docker-env"
   bucket_name: "elasticbeanstalk-us-east-2-690943969225"
   bucket_path : "docker-react-aws"
   on:
